@@ -24,6 +24,7 @@ export interface AppScreenshot {
   storeSource: 'Google Play Store' | 'Apple App Store' | 'Verified Production';
   tag: string;
   screenType: 'dashboard' | 'transaction' | 'scanner' | 'catalog' | 'rewards' | 'security';
+  imageUrl?: string;
 }
 
 export interface Project {
