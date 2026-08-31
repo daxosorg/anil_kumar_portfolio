@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Project, AppScreenshot } from '../types';
 import { playSound } from '../utils/soundEffects';
+import { getAssetUrl } from '../utils/assetHelper';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -243,7 +244,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                         >
                           {sn.imageUrl ? (
                             <img
-                              src={sn.imageUrl}
+                              src={getAssetUrl(sn.imageUrl)}
                               alt={sn.title}
                               className="w-full h-36 object-cover object-top transition-transform group-hover:scale-105"
                             />
@@ -320,7 +321,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                         <div className="rounded-[32px] overflow-hidden bg-[#0d121f] border border-slate-800 relative aspect-[9/19.5] flex items-center justify-center">
                           {currentScreenshot.imageUrl ? (
                             <img
-                              src={currentScreenshot.imageUrl}
+                              src={getAssetUrl(currentScreenshot.imageUrl)}
                               alt={currentScreenshot.title}
                               className="w-full h-full object-cover object-top select-none transition-transform duration-300 group-hover:scale-102"
                             />
@@ -438,7 +439,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                             }`}
                           >
                             {sn.imageUrl ? (
-                              <img src={sn.imageUrl} alt={sn.title} className="w-full h-full object-cover object-top" />
+                              <img src={getAssetUrl(sn.imageUrl)} alt={sn.title} className="w-full h-full object-cover object-top" />
                             ) : (
                               <div className="w-full h-full bg-slate-900 flex items-center justify-center text-[10px] text-slate-400 font-mono">
                                 {idx + 1}
@@ -488,7 +489,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 onClick={(e) => e.stopPropagation()}
               >
                 <img
-                  src={currentScreenshot.imageUrl}
+                  src={getAssetUrl(currentScreenshot.imageUrl)}
                   alt={currentScreenshot.title}
                   className="max-h-[78vh] w-auto max-w-[90vw] object-contain rounded-2xl shadow-2xl border border-slate-700"
                 />

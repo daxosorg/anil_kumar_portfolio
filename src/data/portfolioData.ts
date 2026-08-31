@@ -12,8 +12,8 @@ export const PERSONAL_INFO = {
   linkedin: 'https://www.linkedin.com/in/anil-kumar-7a2b61137',
   github: 'https://github.com/anilshrivastav',
   pubDev: 'https://pub.dev/publishers/anilshrivastav',
-  resumeUrl: 'https://drive.google.com/file/d/1IDSoSU1fH2gdbO2HJ3inG316R9f1u6Pm/view?usp=sharing',
-  resumeDownloadUrl: 'https://drive.google.com/file/d/1IDSoSU1fH2gdbO2HJ3inG316R9f1u6Pm/view?usp=sharing',
+  resumeUrl: 'https://drive.google.com/file/d/1NLiS7PWhVUK27l4y2WMoN-6ii-SQmRH4/view?usp=sharing',
+  resumeDownloadUrl: 'https://drive.google.com/file/d/1NLiS7PWhVUK27l4y2WMoN-6ii-SQmRH4/view?usp=sharing',
   summary:
     'Senior Cross-Platform Mobile Engineer with 5+ years of production experience architecting, optimizing, and deploying mission-critical Flutter and Dart applications for global enterprises including Amazon DSPs, Comdata, PHILIPS Signify, Ashok Leyland, and JK Lakshmi Cement. Proven track record of boosting app runtime performance by 30%, maintaining a 99.9% crash-free rate across 500k+ users, leading Agile mobile squads, and publishing across 6 major global app stores.',
   quickStats: [

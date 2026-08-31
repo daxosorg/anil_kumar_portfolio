@@ -12,6 +12,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { playSound } from '../utils/soundEffects';
+import { getAssetUrl } from '../utils/assetHelper';
 
 interface PhoneSimulatorProps {
   initialAppId?: string;
@@ -225,7 +226,7 @@ export const PhoneSimulator: React.FC<PhoneSimulatorProps> = ({
                 {/* Real High-Resolution Play Store Screenshot */}
                 <div className="relative flex-1 w-full h-full overflow-hidden bg-slate-950 flex items-center justify-center">
                   <img
-                    src={currentAppConfig.screenshot}
+                    src={getAssetUrl(currentAppConfig.screenshot)}
                     alt={currentAppConfig.title}
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
