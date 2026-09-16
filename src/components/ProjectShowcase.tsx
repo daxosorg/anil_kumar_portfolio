@@ -226,14 +226,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                       ))}
                     </div>
 
-                    {/* Business impact (detailed view) */}
-                    {viewLayout === 'detailed' && (
-                      <div className="p-3 rounded-2xl bg-emerald-500/[0.07] border border-emerald-500/15">
-                        <p className="text-xs text-emerald-300/70 leading-relaxed">
-                          {project.businessImpact}
-                        </p>
-                      </div>
-                    )}
+
                   </div>
 
                   {/* Card Footer */}

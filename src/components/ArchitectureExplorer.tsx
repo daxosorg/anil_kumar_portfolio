@@ -205,29 +205,19 @@ export const ArchitectureExplorer: React.FC = () => {
               </p>
             </div>
 
-            {/* Implementation Methodology */}
+            {/* Methodology */}
             <div className="space-y-2.5">
               <div className="text-xs font-mono text-cyan-400 font-bold flex items-center gap-1.5 uppercase">
                 <Activity className="w-3.5 h-3.5" />
-                <span>Production Engineering Methodology</span>
+                <span>Methodology</span>
               </div>
-
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] space-y-2">
-                {currentPillar.methodology.map((item, idx) => (
+                {currentPillar.methodology.slice(0, 2).map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
                     <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0 mt-0.5" />
                     <span className="leading-snug">{item}</span>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Hiring Manager Advantage Box */}
-            <div className="p-4 rounded-2xl bg-emerald-500/[0.07] border border-emerald-500/20 text-xs text-emerald-300 flex items-start gap-2.5">
-              <Award className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-              <div>
-                <span className="font-bold text-emerald-300">Why This Matters For Your Team:</span>
-                <p className="text-emerald-300/70 text-xs mt-0.5 leading-relaxed">{currentPillar.hiringAdvantage}</p>
               </div>
             </div>
 

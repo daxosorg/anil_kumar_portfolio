@@ -152,7 +152,7 @@ export const ExperienceTimeline: React.FC = () => {
 
                     {/* Achievements */}
                     <ul className="space-y-1.5 pt-1">
-                      {exp.achievements.map((ach, ai) => (
+                      {exp.achievements.slice(0, 2).map((ach, ai) => (
                         <li key={ai} className="text-xs text-slate-400 flex items-start gap-2 leading-relaxed">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
                           <span>{ach}</span>

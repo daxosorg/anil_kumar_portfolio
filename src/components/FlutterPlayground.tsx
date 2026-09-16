@@ -90,10 +90,6 @@ export const FlutterPlayground: React.FC = () => {
             <div className="lg:col-span-6 space-y-4">
               <span className="text-xs font-mono text-cyan-800 font-bold uppercase tracking-wider">Runtime Speed Benchmark</span>
               <h3 className="text-2xl font-bold text-slate-900">+30% Faster Execution & 120 FPS</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
-
-                Demonstrating the tangible impact of high-level asynchronous architecture, background data pipelines, and isolated rendering boundaries on user experience.
-              </p>
 
               {/* Mode Toggle */}
               <div className="flex items-center gap-2 p-1.5 bg-white/[0.05] border border-white/10 rounded-full max-w-md">
@@ -217,7 +213,7 @@ export const FlutterPlayground: React.FC = () => {
 
               <div className="flex items-center gap-2 text-xs text-slate-600">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Zero downtime recorded across major Q4 holiday peak delivery spikes.</span>
+                <span>Zero downtime across Q4 peak delivery spikes.</span>
               </div>
             </div>
 
@@ -249,9 +245,6 @@ export const FlutterPlayground: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  Real-time telemetry configured with automatic alerting, crash grouping, and sub-minute issue triage.
-                </p>
               </div>
             </div>
           </div>
@@ -263,26 +256,11 @@ export const FlutterPlayground: React.FC = () => {
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Global App Distribution</span>
               <h3 className="text-2xl font-bold text-white">Multi-Store Deployment Mastery</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
-
-                Full-lifecycle publishing expertise across 6 major global app marketplaces, managing store compliance, review guidelines, and automated CI/CD releases.
-              </p>
 
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] text-xs space-y-2 text-slate-300">
-                <div className="font-bold text-white">Publishing Capabilities:</div>
-
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0" />
-                  <span>Google Play Console (AAB bundles, Play Integrity)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0" />
-                  <span>Apple App Store Connect (TestFlight, Provisioning)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0" />
-                  <span>Samsung, Huawei, Amazon & Xiaomi distribution</span>
-                </div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0" /><span>Google Play Console (AAB bundles, Play Integrity)</span></div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0" /><span>Apple App Store Connect (TestFlight, Provisioning)</span></div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0" /><span>Samsung, Huawei, Amazon &amp; Xiaomi</span></div>
               </div>
             </div>
 
@@ -319,10 +297,6 @@ export const FlutterPlayground: React.FC = () => {
             <div className="lg:col-span-6 space-y-4">
               <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Engineering Productivity</span>
               <h3 className="text-2xl font-bold text-white">+40% Faster Sprint Delivery</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">
-
-                Feature-First architecture and modular domain separation enable cross-functional squads to build, test, and ship mobile features without stepping on each other's code.
-              </p>
 
               {/* Team Size Slider */}
               <div className="space-y-2 p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07]">
@@ -342,16 +316,8 @@ export const FlutterPlayground: React.FC = () => {
               </div>
 
               <div className="text-xs text-slate-400 space-y-1">
-                <div className="font-bold text-white">Key Organizational Wins:</div>
-
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600" />
-                  <span>Onboarding new engineers reduced from 3 weeks to 4 days</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600" />
-                  <span>CI/CD automated build pipelines save 80% deployment overhead</span>
-                </div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-cyan-600" /><span>Onboarding: 3 weeks → 4 days</span></div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-cyan-600" /><span>CI/CD saves 80% deployment overhead</span></div>
               </div>
             </div>
 
@@ -383,9 +349,6 @@ export const FlutterPlayground: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  Proven Agile squad leadership recognized with the Star Performer Award for high velocity and client satisfaction.
-                </p>
               </div>
             </div>
           </div>
