@@ -143,9 +143,7 @@ export const ArchitectureExplorer: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
           Architecture, Scalability &amp; <span className="text-shimmer">Engineering Standards</span>
         </h2>
-        <p className="text-slate-500 text-sm leading-relaxed">
-          Production-grade architectural patterns that guarantee 99.9% reliability and cross-team scale.
-        </p>
+        
 
       </div>
 
@@ -192,36 +190,15 @@ export const ArchitectureExplorer: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left: Pillar Overview & Methodology */}
-          <div className="lg:col-span-7 space-y-6">
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: currentPillar.color }} />
-                <h3 className="text-xl font-bold text-white">{currentPillar.name}</h3>
-            </div>
-              <div className="text-sm font-semibold text-cyan-400 mt-1">{currentPillar.headline}</div>
-              <p className="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
-                {currentPillar.description}
-              </p>
-            </div>
-
-            {/* Methodology */}
-            <div className="space-y-2.5">
-              <div className="text-xs font-mono text-cyan-400 font-bold flex items-center gap-1.5 uppercase">
-                <Activity className="w-3.5 h-3.5" />
-                <span>Methodology</span>
-              </div>
-              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] space-y-2">
-                {currentPillar.methodology.slice(0, 2).map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0 mt-0.5" />
-                    <span className="leading-snug">{item}</span>
-                  </div>
-                ))}
+            <div className="lg:col-span-7 space-y-4">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: currentPillar.color }} />
+                  <h3 className="text-xl font-bold text-white">{currentPillar.name}</h3>
+                </div>
+                <div className="text-sm font-semibold text-cyan-400 mt-1">{currentPillar.headline}</div>
               </div>
             </div>
-
-          </div>
 
           {/* Right: Quantifiable Business Outcomes & Key Metrics */}
           <div className="lg:col-span-5 space-y-4">

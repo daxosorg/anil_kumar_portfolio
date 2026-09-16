@@ -72,9 +72,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
               Featured Enterprise &amp;{' '}
               <span className="text-shimmer">Commercial Applications</span>
             </h2>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              Production apps for Fortune 500 enterprises — 99.9% crash-free, +30% performance, 6 global stores.
-            </p>
+            
           </div>
 
           {/* Layout Toggle */}
@@ -199,10 +197,6 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                       </span>
                     </div>
 
-                    {/* Summary */}
-                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed line-clamp-2">
-                      {project.summary}
-                    </p>
 
                     {/* Metrics badges */}
                     <div className="grid grid-cols-3 gap-2">

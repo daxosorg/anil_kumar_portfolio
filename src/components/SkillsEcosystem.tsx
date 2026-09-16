@@ -144,9 +144,7 @@ export const SkillsEcosystem: React.FC = () => {
             Skills, Architecture &amp;{' '}
             <span className="text-shimmer">Multi-Store Ecosystem</span>
           </h2>
-          <p className="text-slate-500 text-sm leading-relaxed">
-            Dart &amp; Flutter internals, reactive state management, Firebase — deployed across 6 global app stores.
-          </p>
+          
         </div>
 
         {/* 6 Global Stores Strip */}

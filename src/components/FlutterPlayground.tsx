@@ -44,9 +44,7 @@ export const FlutterPlayground: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
           Measurable Engineering <span className="text-shimmer">Results &amp; ROI</span>
         </h2>
-        <p className="text-slate-500 text-sm leading-relaxed">
-          Interactive metrics — +30% runtime speedup, 99.9% crash-free SLA, multi-store global reach.
-        </p>
+        
       </div>
 
       {/* Lab Navigation Tabs */}

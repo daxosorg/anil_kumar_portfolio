@@ -44,9 +44,7 @@ export const ExperienceTimeline: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             5+ Years of <span className="text-shimmer">Engineering Track Record</span>
           </h2>
-          <p className="text-slate-500 text-sm leading-relaxed">
-            Consistent delivery across enterprise mobile squads — mentoring teams, leading architecture, shipping on time.
-          </p>
+          
         </div>
 
         {/* Star Performer Award Spotlight */}
@@ -150,15 +148,6 @@ export const ExperienceTimeline: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Achievements */}
-                    <ul className="space-y-1.5 pt-1">
-                      {exp.achievements.slice(0, 2).map((ach, ai) => (
-                        <li key={ai} className="text-xs text-slate-400 flex items-start gap-2 leading-relaxed">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
-                          <span>{ach}</span>
-                        </li>
-                      ))}
-                    </ul>
 
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-1.5 pt-2 border-t border-white/[0.06]">

@@ -74,9 +74,7 @@ export const ContactSection: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
           Ready to Build Your Next <span className="text-shimmer">High-Performance</span> Mobile App?
         </h2>
-        <p className="text-slate-500 text-sm leading-relaxed">
-          Open to senior Flutter roles, architecture audits, and contract work.
-        </p>
+        
 
       </div>
 
@@ -86,11 +84,7 @@ export const ContactSection: React.FC = () => {
         <div className="lg:col-span-5 space-y-4">
           <div className="p-6 sm:p-7 rounded-3xl glass-card border border-white/[0.08] space-y-6">
             <div>
-              <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Direct Channels</span>
-              <h3 className="text-xl font-bold text-white mt-1">Get in Touch with Anil</h3>
-              <p className="text-xs text-slate-600 mt-1">
-                Senior roles, architecture audits &amp; high-stakes contracts.
-              </p>
+              
             </div>
 
             <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] flex items-center justify-between group">
@@ -196,11 +190,7 @@ export const ContactSection: React.FC = () => {
         <div className="lg:col-span-7">
           <div className="p-6 sm:p-8 rounded-3xl glass-card border border-white/[0.08] space-y-5">
             <div>
-              <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Quick Inquiry</span>
-              <h3 className="text-xl font-bold text-white mt-1">Send a Message</h3>
-              <p className="text-xs text-slate-600 mt-1">
-                I respond within 24 hours.
-              </p>
+              
             </div>
 
             {isSent && (
