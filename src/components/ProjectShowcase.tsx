@@ -63,16 +63,8 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="space-y-4 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-cyan-500/20 text-xs font-mono text-cyan-400 font-bold">
-              <Smartphone className="w-3.5 h-3.5" />
-              <span>VERIFIED PRODUCTION MOBILE SHOWCASE</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-              Featured Enterprise &amp;{' '}
-              <span className="text-shimmer">Commercial Applications</span>
-            </h2>
-            
+          <div className="space-y-2 max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">Projects</h2>
           </div>
 
           {/* Layout Toggle */}

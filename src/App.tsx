@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Lenis from 'lenis';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { ProjectShowcase } from './components/ProjectShowcase';
@@ -17,6 +18,21 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
+  // Lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => lenis.destroy();
+  }, []);
+
   const handleOpenContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -32,7 +48,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#020817] text-slate-100 font-sans selection:bg-cyan-500/20 selection:text-cyan-300">
+    <div className="min-h-screen bg-[#0f0f0f] text-[#f0f0f0] font-sans selection:bg-cyan-500/20 selection:text-cyan-300">
       
       {/* Top Floating Glassmorphism Navbar */}
       <Navbar 

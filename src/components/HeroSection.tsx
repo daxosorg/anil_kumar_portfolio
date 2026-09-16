@@ -24,16 +24,15 @@ interface HeroSectionProps {
 }
 
 /* Animated counter for stats */
-function StatCard({ value, label, sub, color }: { value: string; label: string; sub: string; color: string }) {
+function StatCard({ value, label, color }: { value: string; label: string; sub: string; color: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className="glass-card rounded-2xl p-4 hover:border-white/20 transition-all duration-300 group cursor-default"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="glass-card rounded-2xl p-4 transition-all duration-400 group cursor-default hover:border-white/[0.12]"
     >
       <div className={`text-2xl font-black font-mono tracking-tight ${color}`}>{value}</div>
-      <div className="text-xs font-bold text-white/90 mt-0.5">{label}</div>
-      <div className="text-[10px] text-slate-500 truncate mt-0.5">{sub}</div>
+      <div className="text-[11px] text-white/50 mt-1">{label}</div>
     </motion.div>
   );
 }
@@ -46,11 +45,11 @@ const statColors = [
 ];
 
 const enterpriseTags = [
-  { label: 'Amazon DSPs',    color: 'text-amber-300  border-amber-500/20 bg-amber-500/10' },
-  { label: 'Comdata',        color: 'text-emerald-300 border-emerald-500/20 bg-emerald-500/10' },
-  { label: 'PHILIPS Signify',color: 'text-blue-300    border-blue-500/20 bg-blue-500/10' },
-  { label: 'Ashok Leyland',  color: 'text-rose-300    border-rose-500/20 bg-rose-500/10' },
-  { label: 'JK Lakshmi',     color: 'text-purple-300  border-purple-500/20 bg-purple-500/10' },
+  { label: 'Amazon DSPs' },
+  { label: 'Comdata / Corpay' },
+  { label: 'PHILIPS Signify' },
+  { label: 'Ashok Leyland' },
+  { label: 'JK Lakshmi Cement' },
 ];
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -63,16 +62,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       id="hero-section"
       className="relative min-h-screen pt-28 pb-16 px-4 sm:px-6 lg:px-8 flex flex-col justify-center overflow-hidden"
     >
-      {/* Background: deep dark with gradient radial spots */}
-      <div className="absolute inset-0 bg-[#020817]" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-[#0f0f0f]" />
 
-      {/* Animated gradient orbs */}
-      <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-cyan-500/8 rounded-full blur-[120px] pointer-events-none animate-orb-drift" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-violet-600/10 rounded-full blur-[120px] pointer-events-none" style={{ animationDelay: '4s', animation: 'orb-drift 16s ease-in-out infinite' }} />
-      <div className="absolute top-3/4 left-1/4 w-[300px] h-[300px] bg-blue-500/8 rounded-full blur-[100px] pointer-events-none" style={{ animation: 'orb-drift 20s ease-in-out infinite reverse' }} />
-
-      {/* Dot grid overlay */}
-      <div className="absolute inset-0 dot-grid opacity-100 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_40%,#000_50%,transparent_100%)] pointer-events-none" />
+      {/* Single subtle radial glow — no orbs */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6 items-center">
@@ -84,13 +78,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <motion.div
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card text-xs font-mono text-slate-300 border border-white/[0.08]"
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="inline-flex items-center gap-2 text-xs font-mono text-white/40"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-slate-400">Senior Flutter &amp; Dart Specialist</span>
-              <span className="text-white/20">|</span>
-              <span className="text-cyan-400 font-bold">5+ Years Experience</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Available for hire · 5+ Years Flutter</span>
             </motion.div>
 
             {/* Name + Headline */}
@@ -101,12 +93,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="space-y-3"
             >
               {/* Big name */}
-              <div className="text-4xl sm:text-5xl md:text-6xl xl:text-[4.5rem] font-black tracking-tight text-white leading-[1.05]">
+              <div className="text-4xl sm:text-5xl md:text-6xl xl:text-[4.5rem] font-black tracking-[-0.04em] text-white leading-[1.0]">
                 Anil Kumar
               </div>
 
               {/* Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[3.5rem] font-black tracking-tight leading-[1.08] text-white/90">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-[3.5rem] font-black tracking-[-0.03em] leading-[1.08] text-white/80">
                 Crafting{' '}
                 <span className="text-shimmer">Fluid, High-Speed</span>
                 <br />
@@ -114,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </h1>
 
               {/* Sub */}
-              <p className="text-sm text-slate-500 max-w-lg leading-relaxed">
+              <p className="text-sm text-white/35 max-w-lg leading-relaxed">
                 5+ years shipping production Flutter apps across 6 global app stores.
               </p>
             </motion.div>
@@ -186,11 +178,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="pt-4 border-t border-white/[0.06] flex flex-wrap items-center gap-2"
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="pt-4 border-t border-white/[0.05] flex flex-wrap items-center gap-1.5"
             >
               {enterpriseTags.map((t, i) => (
-                <span key={i} className={`px-3 py-1 rounded-full text-xs font-semibold border ${t.color}`}>
+                <span key={i} className="px-2.5 py-1 rounded-md text-[11px] font-medium border border-white/[0.07] text-white/40 bg-white/[0.02]">
                   {t.label}
                 </span>
               ))}

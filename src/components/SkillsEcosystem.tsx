@@ -135,16 +135,8 @@ export const SkillsEcosystem: React.FC = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
-        <div className="space-y-4 mb-14 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-violet-500/20 text-xs font-mono text-violet-400 font-bold">
-            <Boxes className="w-3.5 h-3.5" />
-            <span>TECHNICAL ARSENAL &amp; DISTRIBUTION</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            Skills, Architecture &amp;{' '}
-            <span className="text-shimmer">Multi-Store Ecosystem</span>
-          </h2>
-          
+        <div className="space-y-2 mb-14 text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">Skills</h2>
         </div>
 
         {/* 6 Global Stores Strip */}

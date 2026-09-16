@@ -36,15 +36,10 @@ export const FlutterPlayground: React.FC = () => {
       <div className="max-w-7xl mx-auto">
       
       {/* Section Header */}
-      <div className="space-y-3 mb-10 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-cyan-500/20 text-xs font-mono text-cyan-400 font-bold">
-          <TrendingUp className="w-3.5 h-3.5" />
-          <span>PERFORMANCE BENCHMARK LAB</span>
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-          Measurable Engineering <span className="text-shimmer">Results &amp; ROI</span>
+      <div className="space-y-2 mb-10 text-center max-w-3xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">
+          Flutter Lab
         </h2>
-        
       </div>
 
       {/* Lab Navigation Tabs */}

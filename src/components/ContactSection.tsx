@@ -66,16 +66,10 @@ export const ContactSection: React.FC = () => {
 
       
       {/* Section Header */}
-      <div className="space-y-3 mb-12 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-cyan-500/20 text-xs font-mono text-cyan-400 font-bold">
-          <MessageSquare className="w-3.5 h-3.5" />
-          <span>LET'S CONNECT</span>
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-          Ready to Build Your Next <span className="text-shimmer">High-Performance</span> Mobile App?
+      <div className="space-y-2 mb-12 text-center max-w-3xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">
+          Contact
         </h2>
-        
-
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

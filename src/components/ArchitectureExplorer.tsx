@@ -135,16 +135,10 @@ export const ArchitectureExplorer: React.FC = () => {
 
       
       {/* Section Header */}
-      <div className="space-y-3 mb-12 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-blue-500/20 text-xs font-mono text-blue-400 font-bold">
-          <Layers className="w-3.5 h-3.5" />
-          <span>ENTERPRISE ENGINEERING FOUNDATIONS</span>
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-          Architecture, Scalability &amp; <span className="text-shimmer">Engineering Standards</span>
+      <div className="space-y-2 mb-12 text-center max-w-3xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">
+          Architecture
         </h2>
-        
-
       </div>
 
       {/* Pillar Navigation Selector */}

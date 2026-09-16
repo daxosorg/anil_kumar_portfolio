@@ -36,15 +36,10 @@ export const ExperienceTimeline: React.FC = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
-        <div className="space-y-4 mb-12 text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-violet-500/20 text-xs font-mono text-violet-400 font-bold">
-            <Briefcase className="w-3.5 h-3.5" />
-            <span>CAREER TIMELINE &amp; RECOGNITION</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            5+ Years of <span className="text-shimmer">Engineering Track Record</span>
+        <div className="space-y-2 mb-12 text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">
+            Experience
           </h2>
-          
         </div>
 
         {/* Star Performer Award Spotlight */}
