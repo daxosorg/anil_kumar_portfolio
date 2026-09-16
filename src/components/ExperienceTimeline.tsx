@@ -44,8 +44,8 @@ export const ExperienceTimeline: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             5+ Years of <span className="text-shimmer">Engineering Track Record</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Consistent history of delivering complex client deliverables, mentoring teams, and leading mobile cross-platform squads.
+          <p className="text-slate-500 text-sm leading-relaxed">
+            Consistent delivery across enterprise mobile squads — mentoring teams, leading architecture, shipping on time.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export const ExperienceTimeline: React.FC = () => {
                 <h3 className="text-xl sm:text-2xl font-extrabold text-white">
                   {EDUCATION_AWARDS.award.title} • {EDUCATION_AWARDS.award.company}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 max-w-2xl leading-relaxed">
+                <p className="text-xs text-slate-500 max-w-2xl leading-relaxed">
                   {EDUCATION_AWARDS.award.description}
                 </p>
               </div>

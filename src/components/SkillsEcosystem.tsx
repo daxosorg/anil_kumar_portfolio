@@ -144,20 +144,14 @@ export const SkillsEcosystem: React.FC = () => {
             Skills, Architecture &amp;{' '}
             <span className="text-shimmer">Multi-Store Ecosystem</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-            Deep mastery in Dart &amp; Flutter internals, reactive state management, Firebase telemetry, and verified distribution across 6 major global app platforms.
+          <p className="text-slate-500 text-sm leading-relaxed">
+            Dart &amp; Flutter internals, reactive state management, Firebase — deployed across 6 global app stores.
           </p>
         </div>
 
         {/* 6 Global Stores Strip */}
         <div className="mb-14 space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="text-xs font-bold font-mono uppercase tracking-widest text-cyan-400 flex items-center gap-2">
-              <Globe className="w-4 h-4" />
-              <span>Multi-Store Production Deployment Ecosystem (6 Stores)</span>
-            </div>
-            <span className="text-xs text-slate-500 font-medium">OEM &amp; Enterprise Compliant</span>
-          </div>
+          <span className="text-xs text-slate-500">6 Stores · OEM &amp; Enterprise</span>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {GLOBAL_STORES.map((store, i) => {

@@ -37,15 +37,15 @@ export const FlutterPlayground: React.FC = () => {
       
       {/* Section Header */}
       <div className="space-y-3 mb-10 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200/80 text-xs font-mono text-cyan-800 font-bold">
-          <TrendingUp className="w-3.5 h-3.5 text-cyan-600" />
-          <span>BUSINESS IMPACT & PERFORMANCE BENCHMARK LAB</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-cyan-500/20 text-xs font-mono text-cyan-400 font-bold">
+          <TrendingUp className="w-3.5 h-3.5" />
+          <span>PERFORMANCE BENCHMARK LAB</span>
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-          Measurable Engineering Results & Business ROI
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+          Measurable Engineering <span className="text-shimmer">Results &amp; ROI</span>
         </h2>
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-          Interactive metrics proving tangible business outcomes: +30% runtime speedup, 99.9% crash-free SLA, cross-store global reach, and accelerated sprint velocity.
+        <p className="text-slate-500 text-sm leading-relaxed">
+          Interactive metrics — +30% runtime speedup, 99.9% crash-free SLA, multi-store global reach.
         </p>
       </div>
 

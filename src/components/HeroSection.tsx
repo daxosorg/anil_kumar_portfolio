@@ -114,17 +114,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </h1>
 
               {/* Sub */}
-              <p className="text-sm sm:text-base text-slate-400 max-w-xl leading-relaxed">
-                I architect production-grade cross-platform apps for global enterprise leaders —{' '}
-                {enterpriseTags.map((t, i) => (
-                  <span key={i}>
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-md border text-xs font-semibold ${t.color}`}>
-                      {t.label}
-                    </span>
-                    {i < enterpriseTags.length - 1 ? ' ' : ''}
-                  </span>
-                ))}
-                .
+              <p className="text-sm text-slate-500 max-w-lg leading-relaxed">
+                5+ years shipping production Flutter apps across 6 global app stores.
               </p>
             </motion.div>
 
@@ -191,24 +182,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </a>
             </motion.div>
 
-            {/* Verified enterprises strip */}
+            {/* Enterprise strip */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.45 }}
-              className="pt-4 border-t border-white/[0.06] space-y-2.5"
+              className="pt-4 border-t border-white/[0.06] flex flex-wrap items-center gap-2"
             >
-              <div className="text-xs font-semibold uppercase tracking-widest text-slate-500 flex items-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-                <span>Verified Production Apps Shipped For</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-2">
-                {enterpriseTags.map((t, i) => (
-                  <span key={i} className={`px-3 py-1 rounded-full text-xs font-semibold border ${t.color}`}>
-                    {t.label}
-                  </span>
-                ))}
-              </div>
+              {enterpriseTags.map((t, i) => (
+                <span key={i} className={`px-3 py-1 rounded-full text-xs font-semibold border ${t.color}`}>
+                  {t.label}
+                </span>
+              ))}
             </motion.div>
           </div>
 

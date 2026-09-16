@@ -143,8 +143,8 @@ export const ArchitectureExplorer: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
           Architecture, Scalability &amp; <span className="text-shimmer">Engineering Standards</span>
         </h2>
-        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-          How Anil architecturally structures production mobile systems to guarantee 99.9% reliability, +30% runtime speedup, and seamless cross-functional team scale.
+        <p className="text-slate-500 text-sm leading-relaxed">
+          Production-grade architectural patterns that guarantee 99.9% reliability and cross-team scale.
         </p>
 
       </div>
@@ -181,7 +181,6 @@ export const ArchitectureExplorer: React.FC = () => {
 
               <div>
                 <h4 className="text-sm font-bold text-white">{pillar.name}</h4>
-                <p className="text-[11px] text-slate-400 line-clamp-2 mt-1">{pillar.description}</p>
               </div>
             </button>
           );

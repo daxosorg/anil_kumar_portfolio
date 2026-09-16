@@ -74,8 +74,8 @@ export const ContactSection: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
           Ready to Build Your Next <span className="text-shimmer">High-Performance</span> Mobile App?
         </h2>
-        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-          Whether you need a Senior Flutter Lead for an enterprise cross-platform product or contract optimization, feel free to reach out.
+        <p className="text-slate-500 text-sm leading-relaxed">
+          Open to senior Flutter roles, architecture audits, and contract work.
         </p>
 
       </div>
@@ -88,9 +88,8 @@ export const ContactSection: React.FC = () => {
             <div>
               <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Direct Channels</span>
               <h3 className="text-xl font-bold text-white mt-1">Get in Touch with Anil</h3>
-              <p className="text-xs text-slate-500 mt-1">
-
-                Available for full-time senior mobile roles, architecture audits, and high-stakes contract work.
+              <p className="text-xs text-slate-600 mt-1">
+                Senior roles, architecture audits &amp; high-stakes contracts.
               </p>
             </div>
 
@@ -199,9 +198,8 @@ export const ContactSection: React.FC = () => {
             <div>
               <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Quick Inquiry</span>
               <h3 className="text-xl font-bold text-white mt-1">Send a Message</h3>
-              <p className="text-xs text-slate-500 mt-1">
-
-                Drop your project requirements or interview inquiry and I'll respond within 24 hours.
+              <p className="text-xs text-slate-600 mt-1">
+                I respond within 24 hours.
               </p>
             </div>
 

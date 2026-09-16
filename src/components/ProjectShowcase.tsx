@@ -72,8 +72,8 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
               Featured Enterprise &amp;{' '}
               <span className="text-shimmer">Commercial Applications</span>
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              High-impact mobile products for Fortune 500 &amp; enterprise leaders — delivering 99.9% crash-free SLAs, +30% performance gains, and verified multi-store publishing.
+            <p className="text-slate-500 text-sm leading-relaxed">
+              Production apps for Fortune 500 enterprises — 99.9% crash-free, +30% performance, 6 global stores.
             </p>
           </div>
 
@@ -199,13 +199,10 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                       </span>
                     </div>
 
-                    {/* Subtitle & Summary */}
-                    <div className="space-y-1.5">
-                      <div className="text-xs font-bold text-slate-300">{project.subtitle}</div>
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed line-clamp-3">
-                        {project.summary}
-                      </p>
-                    </div>
+                    {/* Summary */}
+                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed line-clamp-2">
+                      {project.summary}
+                    </p>
 
                     {/* Metrics badges */}
                     <div className="grid grid-cols-3 gap-2">
@@ -219,10 +216,10 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1.5">
-                      {project.tags.slice(0, 5).map((tag) => (
+                      {project.tags.slice(0, 4).map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-0.5 rounded-md bg-white/[0.05] border border-white/[0.07] text-[10px] font-semibold text-slate-400"
+                          className="px-2.5 py-0.5 rounded-md bg-white/[0.05] border border-white/[0.07] text-[10px] font-semibold text-slate-500"
                         >
                           {tag}
                         </span>
@@ -231,12 +228,8 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
 
                     {/* Business impact (detailed view) */}
                     {viewLayout === 'detailed' && (
-                      <div className="p-3.5 rounded-2xl bg-emerald-500/[0.07] border border-emerald-500/20 space-y-1">
-                        <div className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
-                          <TrendingUp className="w-3.5 h-3.5" />
-                          Measurable Impact Delivered:
-                        </div>
-                        <p className="text-xs text-emerald-300/80 leading-relaxed">
+                      <div className="p-3 rounded-2xl bg-emerald-500/[0.07] border border-emerald-500/15">
+                        <p className="text-xs text-emerald-300/70 leading-relaxed">
                           {project.businessImpact}
                         </p>
                       </div>
@@ -294,7 +287,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                         onClick={() => { playSound('click'); onSelectProject(project); }}
                         className="px-3.5 py-1.5 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-[11px] font-bold flex items-center gap-1 cursor-pointer transition-all shadow-md shadow-cyan-500/20"
                       >
-                        <span>Impact Deep Dive</span>
+                        <span>Deep Dive</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
                       </button>
                     </div>
