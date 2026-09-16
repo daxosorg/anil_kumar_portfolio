@@ -31,7 +31,9 @@ export const FlutterPlayground: React.FC = () => {
   const [teamSize, setTeamSize] = useState(6);
 
   return (
-    <section id="lab" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="lab" className="relative py-24 px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="max-w-7xl mx-auto">
       
       {/* Section Header */}
       <div className="space-y-3 mb-10 text-center max-w-3xl mx-auto">
@@ -48,7 +50,7 @@ export const FlutterPlayground: React.FC = () => {
       </div>
 
       {/* Lab Navigation Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-1.5 p-1.5 mb-8 bg-white rounded-full border border-slate-200/80 shadow-sm max-w-2xl mx-auto">
+      <div className="flex flex-wrap items-center justify-center gap-1.5 p-1.5 mb-8 glass-card rounded-full border border-white/[0.08] max-w-2xl mx-auto">
         {[
           { id: 'speed', name: '+30% Speed Boost', icon: Zap },
           { id: 'sla', name: '99.9% Production SLA', icon: ShieldCheck },
@@ -66,8 +68,8 @@ export const FlutterPlayground: React.FC = () => {
               }}
               className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 isActive
-                  ? 'bg-slate-900 text-white shadow-md'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
+                  : 'text-slate-400 hover:text-white hover:bg-white/10'
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -77,8 +79,10 @@ export const FlutterPlayground: React.FC = () => {
         })}
       </div>
 
+
       {/* Main Interactive Benchmark Card */}
-      <div className="rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-xl shadow-slate-100/80">
+      <div className="rounded-3xl glass-card border border-white/[0.08] p-6 sm:p-8">
+
         
         {/* TAB 1: +30% Performance & Speed */}
         {activeTab === 'speed' && (
@@ -86,12 +90,14 @@ export const FlutterPlayground: React.FC = () => {
             <div className="lg:col-span-6 space-y-4">
               <span className="text-xs font-mono text-cyan-800 font-bold uppercase tracking-wider">Runtime Speed Benchmark</span>
               <h3 className="text-2xl font-bold text-slate-900">+30% Faster Execution & 120 FPS</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <p className="text-sm text-slate-400 leading-relaxed">
+
                 Demonstrating the tangible impact of high-level asynchronous architecture, background data pipelines, and isolated rendering boundaries on user experience.
               </p>
 
               {/* Mode Toggle */}
-              <div className="flex items-center gap-2 p-1.5 bg-slate-100 rounded-full border border-slate-200 max-w-md">
+              <div className="flex items-center gap-2 p-1.5 bg-white/[0.05] border border-white/10 rounded-full max-w-md">
+
                 <button
                   onClick={() => {
                     playSound('switch');
@@ -123,15 +129,16 @@ export const FlutterPlayground: React.FC = () => {
 
               {/* Key Business Takeaways */}
               <div className="grid grid-cols-2 gap-2 text-xs pt-2">
-                <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200">
-                  <div className="font-bold text-cyan-800">45s Saved Per Driver</div>
+                <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/[0.07]">
+                  <div className="font-bold text-cyan-400">45s Saved Per Driver</div>
                   <div className="text-[10px] text-slate-500 mt-0.5">Faster pump turnaround for Amazon DSPs</div>
                 </div>
-                <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200">
-                  <div className="font-bold text-emerald-800">-25% Battery Drain</div>
+                <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/[0.07]">
+                  <div className="font-bold text-emerald-400">-25% Battery Drain</div>
                   <div className="text-[10px] text-slate-500 mt-0.5">Crucial for 12-hour continuous field shifts</div>
                 </div>
               </div>
+
             </div>
 
             {/* Gauge Display */}
@@ -183,15 +190,17 @@ export const FlutterPlayground: React.FC = () => {
         {activeTab === 'sla' && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6 space-y-4">
-              <span className="text-xs font-mono text-emerald-700 font-bold uppercase tracking-wider">Enterprise Reliability</span>
-              <h3 className="text-2xl font-bold text-slate-900">99.9% Crash-Free User Sessions</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <span className="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">Enterprise Reliability</span>
+              <h3 className="text-2xl font-bold text-white">99.9% Crash-Free User Sessions</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+
                 Rigorous error boundaries, defensive API deserialization, and cloud crash monitoring guarantee continuous uptime for critical operations like Amazon fleet logistics and Philips warranty verifications.
               </p>
 
               {/* Scale Slider */}
-              <div className="space-y-2 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                <div className="flex justify-between text-xs font-bold text-slate-700">
+              <div className="space-y-2 p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07]">
+                <div className="flex justify-between text-xs font-bold text-slate-300">
+
                   <span>Simulate Active User Base:</span>
                   <span className="text-emerald-600 font-mono">{activeUsers.toLocaleString()} Users</span>
                 </div>
@@ -252,14 +261,16 @@ export const FlutterPlayground: React.FC = () => {
         {activeTab === 'stores' && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs font-mono text-cyan-800 font-bold uppercase tracking-wider">Global App Distribution</span>
-              <h3 className="text-2xl font-bold text-slate-900">Multi-Store Deployment Mastery</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Global App Distribution</span>
+              <h3 className="text-2xl font-bold text-white">Multi-Store Deployment Mastery</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+
                 Full-lifecycle publishing expertise across 6 major global app marketplaces, managing store compliance, review guidelines, and automated CI/CD releases.
               </p>
 
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2 text-slate-700">
-                <div className="font-bold text-slate-900">Publishing Capabilities:</div>
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] text-xs space-y-2 text-slate-300">
+                <div className="font-bold text-white">Publishing Capabilities:</div>
+
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0" />
                   <span>Google Play Console (AAB bundles, Play Integrity)</span>
@@ -306,15 +317,17 @@ export const FlutterPlayground: React.FC = () => {
         {activeTab === 'velocity' && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6 space-y-4">
-              <span className="text-xs font-mono text-cyan-800 font-bold uppercase tracking-wider">Engineering Productivity</span>
-              <h3 className="text-2xl font-bold text-slate-900">+40% Faster Sprint Delivery</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Engineering Productivity</span>
+              <h3 className="text-2xl font-bold text-white">+40% Faster Sprint Delivery</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+
                 Feature-First architecture and modular domain separation enable cross-functional squads to build, test, and ship mobile features without stepping on each other's code.
               </p>
 
               {/* Team Size Slider */}
-              <div className="space-y-2 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                <div className="flex justify-between text-xs font-bold text-slate-700">
+              <div className="space-y-2 p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07]">
+                <div className="flex justify-between text-xs font-bold text-slate-300">
+
                   <span>Mobile Squad Size:</span>
                   <span className="text-cyan-800 font-mono">{teamSize} Engineers</span>
                 </div>
@@ -328,8 +341,9 @@ export const FlutterPlayground: React.FC = () => {
                 />
               </div>
 
-              <div className="text-xs text-slate-600 space-y-1">
-                <div className="font-bold text-slate-900">Key Organizational Wins:</div>
+              <div className="text-xs text-slate-400 space-y-1">
+                <div className="font-bold text-white">Key Organizational Wins:</div>
+
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600" />
                   <span>Onboarding new engineers reduced from 3 weeks to 4 days</span>
@@ -378,7 +392,7 @@ export const FlutterPlayground: React.FC = () => {
         )}
 
       </div>
-
+      </div>
     </section>
   );
 };

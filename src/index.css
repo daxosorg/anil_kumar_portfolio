@@ -1,63 +1,177 @@
 @import "tailwindcss";
 
+/* ──────────────────────────────────────────────────────────
+   DARK PREMIUM DESIGN SYSTEM
+   Background: #020817 (near-black with blue hint)
+   Accent:     #22d3ee (cyan), #a78bfa (purple), #60a5fa (blue)
+────────────────────────────────────────────────────────── */
+
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    background-color: #FAFAFA;
-    color: #0f172a;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #020817;
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #020817;
+    color: #f1f5f9;
   }
 
   code, pre, .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  ::selection {
+    background-color: rgba(34, 211, 238, 0.2);
+    color: #22d3ee;
   }
 }
 
-/* Vibrant Palette custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* ── Dark Custom Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #22d3ee40; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #22d3ee80; }
+
+/* ── Glassmorphism Card Utility ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-::-webkit-scrollbar-track {
-  background: #FAFAFA;
+.glass-card-hover {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(34, 211, 238, 0.25);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.08), 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
 }
 
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 9999px;
+/* ── Cyan Glow Utilities ── */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2), 0 0 60px rgba(34, 211, 238, 0.06);
+}
+.glow-purple {
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.2), 0 0 60px rgba(167, 139, 250, 0.06);
+}
+.glow-blue {
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.2), 0 0 60px rgba(96, 165, 250, 0.06);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
+/* ── Gradient Border Utility ── */
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.4), rgba(167, 139, 250, 0.4));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ── Dot Grid Background Pattern ── */
+.dot-grid {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.15); }
+  50%       { box-shadow: 0 0 40px rgba(34, 211, 238, 0.35), 0 0 80px rgba(34, 211, 238, 0.1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 15px) scale(0.95); }
 }
 
+.animate-fadeInUp  { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-float     { animation: float 4s ease-in-out infinite; }
+.animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+.animate-orb-drift { animation: orb-drift 12s ease-in-out infinite; }
+
+/* ── Shimmer Text ── */
+.text-shimmer {
+  background: linear-gradient(90deg, #22d3ee 0%, #a78bfa 50%, #22d3ee 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ── Neon Text Glow ── */
+.text-glow-cyan { text-shadow: 0 0 20px rgba(34, 211, 238, 0.5); }
+.text-glow-purple { text-shadow: 0 0 20px rgba(167, 139, 250, 0.5); }
+
+/* ── Circular Progress Ring ── */
+.progress-ring-track { stroke: rgba(255,255,255,0.06); }
+.progress-ring-fill {
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+/* ── Noise Texture Overlay ── */
+.noise {
+  position: relative;
+}
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+  border-radius: inherit;
+}
+
+/* ── Print Styles (preserve for resume modal) ── */
 @media print {
   body {
     background: #ffffff !important;
     color: #000000 !important;
     font-size: 11pt;
   }
-
   nav, header, footer, #hero, #projects, #architecture, #lab, #skills, #contact, .print\\:hidden {
     display: none !important;
   }
-
   #resume-printable-content, .printable-resume {
     display: block !important;
     position: static !important;
@@ -70,10 +184,5 @@
     background: transparent !important;
     color: #000000 !important;
   }
-
-  @page {
-    margin: 1.2cm;
-    size: A4 portrait;
-  }
+  @page { margin: 1.2cm; size: A4 portrait; }
 }
-

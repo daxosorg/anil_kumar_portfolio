@@ -32,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-slate-900 font-sans selection:bg-indigo-500/20 selection:text-indigo-900">
+    <div className="min-h-screen bg-[#020817] text-slate-100 font-sans selection:bg-cyan-500/20 selection:text-cyan-300">
       
       {/* Top Floating Glassmorphism Navbar */}
       <Navbar 
