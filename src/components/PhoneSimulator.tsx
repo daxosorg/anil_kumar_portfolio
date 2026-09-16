@@ -123,7 +123,7 @@ export const PhoneSimulator: React.FC<PhoneSimulatorProps> = ({
   return (
     <div id="phone-simulator-container" className={`relative flex flex-col items-center ${className}`}>
       {/* App Selector Pills */}
-      <div className="flex flex-wrap items-center justify-center gap-1.5 p-1.5 mb-3 bg-white/[0.04] backdrop-blur-md rounded-full border border-white/[0.08] max-w-full overflow-x-auto">
+      <div className="flex flex-wrap items-center justify-center gap-1.5 p-1.5 mb-3 bg-white/95 backdrop-blur-md rounded-full border border-slate-200 shadow-md max-w-full overflow-x-auto">
         {appConfigs.map((app) => {
           const Icon = app.icon;
           const isActive = activeApp === app.id;
@@ -134,8 +134,8 @@ export const PhoneSimulator: React.FC<PhoneSimulatorProps> = ({
               onClick={() => handleAppChange(app.id)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
                 isActive
-                  ? 'bg-white/15 text-white shadow-sm border border-white/20'
-                  : 'text-slate-400 hover:text-white hover:bg-white/10'
+                  ? 'bg-slate-900 text-white shadow-sm'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
               }`}
             >
               <span 
@@ -149,16 +149,15 @@ export const PhoneSimulator: React.FC<PhoneSimulatorProps> = ({
         })}
       </div>
 
-
       {/* Simulator Control Bar */}
-      <div className="flex items-center justify-between w-full max-w-[325px] px-3 py-1.5 mb-2 bg-white/[0.04] rounded-xl border border-white/[0.08] text-[11px] text-slate-400">
+      <div className="flex items-center justify-between w-full max-w-[325px] px-3 py-1.5 mb-2 bg-white/90 rounded-xl border border-slate-200 text-[11px] text-slate-600 shadow-xs">
         <div className="flex items-center gap-1.5">
-          <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="inline-flex items-center gap-1 text-emerald-600 font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
             Original Play Store Asset
           </span>
-          <span className="text-white/20">|</span>
-          <span className="text-cyan-400 font-semibold">Verified Live</span>
+          <span className="text-slate-300">|</span>
+          <span className="text-cyan-700 font-semibold">Verified Live</span>
         </div>
 
         <button
@@ -169,16 +168,15 @@ export const PhoneSimulator: React.FC<PhoneSimulatorProps> = ({
           }}
           className={`flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[10px] font-semibold transition-all cursor-pointer ${
             showFeatureGuide
-              ? 'bg-cyan-500/15 text-cyan-400 border border-cyan-500/25'
-              : 'bg-white/[0.05] text-slate-500 hover:text-white border border-white/10'
+              ? 'bg-cyan-100 text-cyan-800 border border-cyan-300'
+              : 'bg-slate-100 text-slate-600 hover:text-slate-900'
           }`}
           title="Toggle Product Feature Highlights"
         >
-          <Info className="w-3 h-3" />
+          <Info className="w-3 h-3 text-cyan-600" />
           <span>Feature Guide {showFeatureGuide ? 'ON' : 'OFF'}</span>
         </button>
       </div>
-
 
       {/* Phone Hardware Mockup Frame */}
       <div className="relative w-[310px] sm:w-[325px] h-[640px] bg-slate-900 rounded-[44px] p-3 shadow-2xl shadow-cyan-950/40 border-4 border-slate-800 ring-1 ring-slate-700/50 select-none">

@@ -129,16 +129,20 @@ export const ArchitectureExplorer: React.FC = () => {
   const currentPillar = pillars.find((p) => p.id === selectedPillarId) || pillars[0];
 
   return (
-    <section id="architecture" className="relative py-24 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto">
-
+    <section id="architecture" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
       {/* Section Header */}
-      <div className="space-y-2 mb-12 text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">
-          Architecture
+      <div className="space-y-3 mb-12 text-center max-w-3xl mx-auto">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200/80 text-xs font-mono text-cyan-800 font-bold">
+          <Layers className="w-3.5 h-3.5 text-cyan-600" />
+          <span>ENTERPRISE ENGINEERING FOUNDATIONS</span>
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+          Architecture, Scalability & Engineering Standards
         </h2>
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          How Anil architecturally structures production mobile systems to guarantee 99.9% reliability, +30% runtime speedup, and seamless cross-functional team scale.
+        </p>
       </div>
 
       {/* Pillar Navigation Selector */}
@@ -155,8 +159,8 @@ export const ArchitectureExplorer: React.FC = () => {
               }}
               className={`p-4 rounded-2xl text-left transition-all duration-200 cursor-pointer flex flex-col justify-between border ${
                 isSelected
-                  ? 'bg-white/[0.08] border-cyan-500/40 shadow-lg shadow-cyan-500/10 scale-[1.02]'
-                  : 'glass-card border-white/[0.08] hover:border-white/20'
+                  ? 'bg-white border-2 border-cyan-600 shadow-lg shadow-cyan-100 scale-[1.02]'
+                  : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-xs shadow-xs'
               }`}
             >
               <div className="flex items-center justify-between mb-2">
@@ -166,13 +170,14 @@ export const ArchitectureExplorer: React.FC = () => {
                 >
                   <Icon className="w-4 h-4" style={{ color: pillar.color }} />
                 </div>
-                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-white/[0.07] text-slate-300">
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
                   {pillar.badge}
                 </span>
               </div>
 
               <div>
-                <h4 className="text-sm font-bold text-white">{pillar.name}</h4>
+                <h4 className="text-sm font-bold text-slate-900">{pillar.name}</h4>
+                <p className="text-[11px] text-slate-500 line-clamp-2 mt-1">{pillar.description}</p>
               </div>
             </button>
           );
@@ -180,19 +185,48 @@ export const ArchitectureExplorer: React.FC = () => {
       </div>
 
       {/* Active Pillar Deep Dive Display */}
-      <div className="rounded-3xl glass-card border border-white/[0.08] p-6 sm:p-8">
-
+      <div className="rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-xl shadow-slate-100/80">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-            <div className="lg:col-span-7 space-y-4">
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: currentPillar.color }} />
-                  <h3 className="text-xl font-bold text-white">{currentPillar.name}</h3>
-                </div>
-                <div className="text-sm font-semibold text-cyan-400 mt-1">{currentPillar.headline}</div>
+          {/* Left: Pillar Overview & Methodology */}
+          <div className="lg:col-span-7 space-y-6">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: currentPillar.color }} />
+                <h3 className="text-xl font-bold text-slate-900">{currentPillar.name}</h3>
+              </div>
+              <div className="text-sm font-semibold text-cyan-800 mt-1">{currentPillar.headline}</div>
+              <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                {currentPillar.description}
+              </p>
+            </div>
+
+            {/* Implementation Methodology */}
+            <div className="space-y-2.5">
+              <div className="text-xs font-mono text-cyan-800 font-bold flex items-center gap-1.5 uppercase">
+                <Activity className="w-3.5 h-3.5" />
+                <span>Production Engineering Methodology</span>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                {currentPillar.methodology.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-cyan-600 shrink-0 mt-0.5" />
+                    <span className="leading-snug">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
+
+            {/* Hiring Manager Advantage Box */}
+            <div className="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200 text-xs text-emerald-950 flex items-start gap-2.5">
+              <Award className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div>
+                <span className="font-bold text-emerald-950">Why This Matters For Your Team:</span>
+                <p className="text-emerald-900 text-xs mt-0.5 leading-relaxed">{currentPillar.hiringAdvantage}</p>
+              </div>
+            </div>
+          </div>
 
           {/* Right: Quantifiable Business Outcomes & Key Metrics */}
           <div className="lg:col-span-5 space-y-4">
@@ -228,7 +262,7 @@ export const ArchitectureExplorer: React.FC = () => {
 
         </div>
       </div>
-      </div>
+
     </section>
   );
 };

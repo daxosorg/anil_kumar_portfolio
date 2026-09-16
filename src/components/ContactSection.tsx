@@ -60,138 +60,155 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="max-w-7xl mx-auto">
-
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
       {/* Section Header */}
-      <div className="space-y-2 mb-12 text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-[-0.03em] text-white">
-          Contact
+      <div className="space-y-3 mb-12 text-center max-w-3xl mx-auto">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200/80 text-xs font-mono text-indigo-700 font-bold">
+          <MessageSquare className="w-3.5 h-3.5" />
+          <span>LET'S CONNECT</span>
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+          Ready to Build Your Next High-Performance Mobile App?
         </h2>
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Whether you need a Senior Flutter Lead for an enterprise cross-platform product or contract optimization, feel free to reach out.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* Left Column: Direct Contact Info & Instant Copy */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="p-6 sm:p-7 rounded-3xl glass-card border border-white/[0.08] space-y-6">
+          <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 shadow-xl shadow-slate-100/80 space-y-6">
             <div>
-              
+              <span className="text-xs font-mono text-indigo-600 font-bold uppercase tracking-wider">Direct Channels</span>
+              <h3 className="text-xl font-bold text-slate-900 mt-1">Get in Touch with Anil</h3>
+              <p className="text-xs text-slate-500 mt-1">
+                Available for full-time senior mobile roles, architecture audits, and high-stakes contract work.
+              </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] flex items-center justify-between group">
+            {/* Email Card */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between group">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-500 font-medium">Email Address</div>
-                  <a href={`mailto:${PERSONAL_INFO.email}`} className="text-xs sm:text-sm font-bold text-white hover:text-cyan-400 transition-colors">
+                  <a href={`mailto:${PERSONAL_INFO.email}`} className="text-xs sm:text-sm font-bold text-slate-900 hover:text-indigo-600 transition-colors">
                     {PERSONAL_INFO.email}
                   </a>
                 </div>
               </div>
+
               <button
                 onClick={() => handleCopy(PERSONAL_INFO.email, 'email')}
-                className="p-2 rounded-lg bg-white/[0.05] border border-white/[0.08] hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer"
+                className="p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-600 hover:text-slate-900 transition-all cursor-pointer shadow-2xs"
                 title="Copy Email"
               >
-                {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
 
-
             {/* Phone & WhatsApp Card */}
-            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] flex items-center justify-between group">
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between group">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] text-slate-500 font-medium">Phone &amp; WhatsApp</div>
-                  <a href={`tel:${PERSONAL_INFO.phone}`} className="text-xs sm:text-sm font-bold text-white hover:text-emerald-400 transition-colors">
+                  <div className="text-[10px] text-slate-500 font-medium">Phone & WhatsApp</div>
+                  <a href={`tel:${PERSONAL_INFO.phone}`} className="text-xs sm:text-sm font-bold text-slate-900 hover:text-emerald-600 transition-colors">
                     {PERSONAL_INFO.phone}
                   </a>
                 </div>
               </div>
+
               <button
                 onClick={() => handleCopy(PERSONAL_INFO.phone, 'phone')}
-                className="p-2 rounded-lg bg-white/[0.05] border border-white/[0.08] hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer"
+                className="p-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-600 hover:text-slate-900 transition-all cursor-pointer shadow-2xs"
                 title="Copy Phone Number"
               >
-                {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/[0.07] flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-rose-500/15 border border-rose-500/20 text-rose-400 flex items-center justify-center">
+            {/* Location Card */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
                 <div className="text-[10px] text-slate-500 font-medium">Location</div>
-                <div className="text-xs sm:text-sm font-bold text-white">{PERSONAL_INFO.location}</div>
+                <div className="text-xs sm:text-sm font-bold text-slate-900">{PERSONAL_INFO.location}</div>
               </div>
             </div>
 
-
             {/* Social & Professional Links */}
-            <div className="flex flex-wrap gap-2">
+            <div className="pt-2 flex flex-wrap gap-2">
               <a
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => playSound('tap')}
-                className="flex-1 py-2.5 px-3 rounded-xl bg-white/[0.04] hover:bg-blue-500/10 border border-white/[0.08] hover:border-blue-500/20 text-xs font-semibold text-slate-300 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                className="flex-1 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-200 text-xs font-semibold text-slate-800 flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
-                <Linkedin className="w-4 h-4 text-blue-400" />
+                <Linkedin className="w-4 h-4 text-blue-600" />
                 <span>LinkedIn Profile</span>
                 <ExternalLink className="w-3 h-3 opacity-60" />
               </a>
+
               <a
                 href={PERSONAL_INFO.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => playSound('tap')}
-                className="flex-1 py-2.5 px-3 rounded-xl bg-white/[0.04] hover:bg-emerald-500/10 border border-white/[0.08] hover:border-emerald-500/20 text-xs font-semibold text-slate-300 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                className="flex-1 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-200 text-xs font-semibold text-slate-800 flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
-                <MessageSquare className="w-4 h-4 text-emerald-400" />
+                <MessageSquare className="w-4 h-4 text-emerald-600" />
                 <span>Chat WhatsApp</span>
                 <ExternalLink className="w-3 h-3 opacity-60" />
               </a>
             </div>
 
-            {/* Resume Download */}
-            <a
-              href={PERSONAL_INFO.resumeUrl}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => playSound('tap')}
-              className="w-full py-3 px-4 rounded-2xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/20 hover:border-cyan-500/40 text-xs font-bold text-cyan-300 flex items-center justify-between transition-all cursor-pointer group"
-            >
-              <div className="flex items-center gap-2">
-                <Download className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                <span>Download Resume</span>
-              </div>
-              <ExternalLink className="w-3.5 h-3.5 opacity-70" />
-            </a>
+            {/* Direct Resume Download Link */}
+            <div className="pt-1">
+              <a
+                href={PERSONAL_INFO.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => playSound('tap')}
+                className="w-full py-3 px-4 rounded-2xl bg-indigo-50 hover:bg-indigo-100/80 border border-indigo-200 text-xs font-bold text-indigo-900 flex items-center justify-between transition-all cursor-pointer shadow-xs group"
+              >
+                <div className="flex items-center gap-2">
+                  <Download className="w-4 h-4 text-indigo-600 group-hover:scale-110 transition-transform" />
+                  <span>Download Resume</span>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-indigo-500 opacity-80" />
+              </a>
+            </div>
 
           </div>
         </div>
 
         {/* Right Column: Interactive Send Message Form */}
         <div className="lg:col-span-7">
-          <div className="p-6 sm:p-8 rounded-3xl glass-card border border-white/[0.08] space-y-5">
+          <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-xl shadow-slate-100/80 space-y-5">
             <div>
-              
+              <span className="text-xs font-mono text-indigo-600 font-bold uppercase tracking-wider">Quick Inquiry</span>
+              <h3 className="text-xl font-bold text-slate-900 mt-1">Send a Message</h3>
+              <p className="text-xs text-slate-500 mt-1">
+                Drop your project requirements or interview inquiry and I'll respond within 24 hours.
+              </p>
             </div>
 
             {isSent && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="p-4 rounded-2xl bg-emerald-500/[0.07] border border-emerald-500/20 text-emerald-300 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                className="p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3"
               >
                 <div className="flex items-center gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
@@ -215,61 +232,57 @@ export const ContactSection: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">Your Name *</label>
+                  <label className="text-xs font-semibold text-slate-700">Your Name *</label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. Sarah Jenkins"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] text-xs text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 focus:bg-white/[0.08] focus:ring-2 focus:ring-cyan-500/10 transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-600 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all"
                   />
-
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">Your Email Address *</label>
+                  <label className="text-xs font-semibold text-slate-700">Your Email Address *</label>
                   <input
                     type="email"
                     required
                     placeholder="sarah@company.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] text-xs text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 focus:bg-white/[0.08] focus:ring-2 focus:ring-cyan-500/10 transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-600 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all"
                   />
-
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-400">Subject / Project Scope</label>
+                <label className="text-xs font-semibold text-slate-700">Subject / Project Scope</label>
                 <input
                   type="text"
                   placeholder="e.g. Flutter Senior Engineer Role / Mobile App Development"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] text-xs text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 focus:bg-white/[0.08] focus:ring-2 focus:ring-cyan-500/10 transition-all"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-600 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all"
                 />
-
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-400">Message / Requirements *</label>
+                <label className="text-xs font-semibold text-slate-700">Message / Requirements *</label>
                 <textarea
                   required
                   rows={4}
                   placeholder="Tell me about your mobile product, timeline, or team requirements..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] text-xs text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 focus:bg-white/[0.08] focus:ring-2 focus:ring-cyan-500/10 transition-all resize-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-indigo-600 focus:bg-white focus:ring-2 focus:ring-indigo-100 transition-all resize-none"
                 />
-
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 rounded-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-cyan-500/25 transition-all disabled:opacity-50"
+                className="w-full py-3 rounded-full bg-gradient-to-r from-indigo-600 to-rose-500 hover:from-indigo-500 hover:to-rose-400 text-white font-bold text-xs flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-indigo-200 transition-all disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <span>Sending Message...</span>
@@ -285,7 +298,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
       </div>
-      </div>
+
     </section>
   );
 };
