@@ -47,13 +47,13 @@ export const PROJECTS: Project[] = [
     phoneMockupType: 'amazon',
     tags: ['Amazon DSPs', 'Fleet Logistics', 'Corpay Financial', 'Flutter', 'Performance Optimization', 'Play Store', 'App Store'],
     summary:
-      'Engineered an enterprise-grade mobile application for Amazon Delivery Service Partners (DSPs) to manage fleet fuel cards, authorize high-volume gas station transactions in real-time, and eliminate route fuel bottlenecks across thousands of active delivery vans.',
+      'Enterprise fleet fuel card app for Amazon DSPs — real-time Corpay card authorization, offline-first sync, and pump geo-validation.',
     challenge:
-      'High transaction latency during peak driver fueling windows and memory bottlenecks on lower-tier Android delivery handhelds resulted in driver downtime and delayed logistics shifts.',
+      'High transaction latency and memory bottlenecks on delivery handhelds during peak fueling windows.',
     solution:
-      'Redesigned the core mobile architecture with asynchronous background processing, predictive offline caching, and isolated rendering boundaries, elevating execution speed by 30% with 0 dropped frames.',
+      'Async background processing, predictive offline caching, and isolated rendering boundaries.',
     businessImpact:
-      'Reduced driver fueling turnaround time by 45 seconds per stop, saved thousands of operational hours across active DSP delivery routes, and maintained a 99.9% crash-free session rate throughout peak holiday volumes.',
+      '45s faster fueling per stop. 99.9% crash-free across peak holiday volumes.',
     keyFeatures: [
       'Real-time Comdata/Corpay fuel card balance monitoring & spending quotas',
       'One-tap cryptographic pump authorization with geo-fenced station validation',
@@ -68,10 +68,10 @@ export const PROJECTS: Project[] = [
       'Hardware-accelerated rendering boundaries isolating animated telemetry charts',
     ],
     hiringHighlights: [
-      'Delivered 30% measurable performance improvement across multi-generational devices',
-      'Maintained 99.9% crash-free SLA during high-intensity Amazon logistics operations',
-      'Successfully passed Amazon and Corpay rigorous enterprise security & compliance audits',
-      'Dual-store production deployment on Google Play Store and Apple App Store',
+      '+30% performance improvement across multi-generational devices',
+      '99.9% crash-free SLA during Amazon logistics operations',
+      'Passed Amazon & Corpay enterprise security audits',
+      'Dual-store: Google Play & Apple App Store',
     ],
     metrics: [
       { label: 'Performance Gain', value: '+30%', description: 'Faster execution and UI responsiveness' },
@@ -144,13 +144,13 @@ export const PROJECTS: Project[] = [
     phoneMockupType: 'comdata',
     tags: ['Comdata Mastercard', 'Financial Tech', 'Fleet Management', 'Geo-Search', 'Play Store', 'App Store'],
     summary:
-      'Developed a scalable commercial fleet management solution empowering drivers and fleet owners to monitor live Mastercard balances, navigate to discounted fuel stops, dispute unauthorized charges, and manage card security in real-time.',
+      'Fleet expense management app — live Mastercard balance, discounted fuel stop radar, instant card freeze, and dispute filing.',
     challenge:
-      'Managing multi-fleet hierarchical account structures with complex security rules, dynamic station discount calculations, and real-time fraud card freeze mechanisms.',
+      'Multi-fleet hierarchical accounts with complex security rules and real-time fraud card freeze mechanics.',
     solution:
-      'Architected a modular micro-service mobile layer with reactive state controllers, debounced geo-location queries, and instant biometrics authentication for card security actions.',
+      'Modular micro-service mobile layer with reactive state controllers and debounced geo-location queries.',
     businessImpact:
-      'Achieved a 4.6-star store rating, reduced driver expense dispute resolution time by 40%, and enabled fleet operators to save up to 15¢/gallon through intelligent fuel discount routing.',
+      '4.6-star rating. 40% faster dispute resolution. Fleet operators save 15¢/gallon via smart routing.',
     keyFeatures: [
       'Instant card freeze/unfreeze security toggle with immediate gateway sync',
       'Interactive geo-located fuel station radar highlighting exclusive fleet discounts',
@@ -163,9 +163,9 @@ export const PROJECTS: Project[] = [
       'Debounced spatial search queries minimizing cloud backend API overhead',
     ],
     hiringHighlights: [
-      'High customer satisfaction score (4.6 ★) across Apple App Store and Google Play',
-      'Full compliance with PCI-DSS mobile financial standards and secure biometric tokens',
-      'Built reusable cross-platform UI components adopted across Corpay product lines',
+      '4.6 ★ across App Store & Google Play',
+      'PCI-DSS mobile financial standards compliant',
+      'Reusable UI components adopted across Corpay product lines',
     ],
     metrics: [
       { label: 'Store Rating', value: '4.6 ★', description: 'Top rated on Apple App Store & Google Play' },
@@ -247,13 +247,13 @@ export const PROJECTS: Project[] = [
     phoneMockupType: 'signify',
     tags: ['PHILIPS Lighting', 'Signify', 'IoT & Warranty', 'Anti-Counterfeiting', 'RBAC', 'Play Store', 'App Store'],
     summary:
-      'Engineered a comprehensive warranty verification and anti-counterfeiting mobile application for Philips lighting solutions, managing high-throughput product authentication across channel partners, stockists, retailers, and certified contractors.',
+      'Warranty verification & anti-counterfeiting app for Philips lighting — RBAC for 4 user tiers, offline QR batch scanning, digital certificate issuance.',
     challenge:
-      'Enforcing strict multi-tier Role-Based Access Control (RBAC) across 4 distinct user personas with customized feature access and high-speed offline QR batch scanning in low-connectivity industrial sites.',
+      'Strict RBAC across 4 user personas with high-speed offline QR scanning in low-connectivity industrial sites.',
     solution:
-      'Engineered a dynamic permission-driven Clean Architecture navigation engine paired with an optimized asynchronous camera hardware scanning pipeline and bi-directional Firestore cloud sync.',
+      'Permission-driven Clean Architecture navigation engine with async camera scanning pipeline and Firestore sync.',
     businessImpact:
-      'Reduced fraudulent warranty claims by 65%, accelerated product verification speed to under 120ms per scan, and streamlined digital certificate issuance across thousands of commercial lighting installations.',
+      '-65% fraudulent warranty claims. <120ms scan speed. Streamlined 4 legacy apps into one Flutter codebase.',
     keyFeatures: [
       'Tailored role flows for Channel Partners, Stockists, Retailers, and Contractors',
       'Ultra-fast batch QR & 2D DataMatrix scanning with instantaneous security verification',
@@ -266,9 +266,9 @@ export const PROJECTS: Project[] = [
       'Comprehensive unit & widget test coverage safeguarding warranty calculation algorithms',
     ],
     hiringHighlights: [
-      'End-to-end security architecture protecting multinational brand intellectual property',
-      'Engineered for 100% offline functionality in low-signal warehouse and industrial environments',
-      'Streamlined 4 disparate legacy mobile apps into a single unified Flutter codebase',
+      'End-to-end security architecture protecting Philips brand IP',
+      '100% offline functionality in low-signal industrial environments',
+      'Unified 4 legacy mobile apps into a single Flutter codebase',
     ],
     metrics: [
       { label: 'Role Tiers', value: '4 Tiers', description: 'Partners, Stockists, Retailers, Contractors' },
@@ -341,13 +341,13 @@ export const PROJECTS: Project[] = [
     phoneMockupType: 'ashok',
     tags: ['Ashok Leyland', 'Automotive OEM', 'Genuine Parts Catalog', 'Loyalty Rewards', 'Riverpod', 'Play Store'],
     summary:
-      'Architected and delivered the primary mobile commerce and loyalty portal for Ashok Leyland auto-parts dealers across India, enabling instant ordering of 10,000+ genuine OEM parts, loyalty tier upgrades, and dispatch tracking.',
+      'Mobile commerce & loyalty portal for Ashok Leyland dealers — 10,000+ genuine OEM parts, loyalty tier rewards, live dispatch tracking.',
     challenge:
-      'A massive automotive parts catalog with thousands of SKU variants, exploded parts diagrams, and high-frequency price updates caused heavy lag on low-bandwidth rural networks.',
+      'Massive parts catalog with thousands of SKUs caused heavy lag on rural low-bandwidth networks.',
     solution:
-      'Built a Riverpod-driven reactive state engine with localized Hive key-value caching, index-based search virtualization, and progressive image decoding.',
+      'Riverpod reactive engine with Hive caching, index-based search virtualization, and progressive image decoding.',
     businessImpact:
-      'Achieved a 94% local cache hit rate, boosted dealer repeat order frequency by 38%, and processed millions in genuine parts purchases with zero server-side downtime.',
+      '94% cache hit rate. +38% dealer repeat orders. Millions in genuine parts processed with zero downtime.',
     keyFeatures: [
       'Comprehensive 10,000+ genuine parts catalog with 3D diagram previews and SKU search',
       'Automated loyalty points accumulation, tier milestones, and instant cashback redemption',
@@ -360,9 +360,9 @@ export const PROJECTS: Project[] = [
       'Multi-level caching strategy combining in-memory, Hive disk, and REST pagination',
     ],
     hiringHighlights: [
-      'Proven expertise handling large-scale catalog datasets with zero UI stutter',
-      'Integrated end-to-end dealer loyalty rewards and order dispatch logistics',
-      'Optimized network payloads saving over 70% mobile bandwidth for rural retailers',
+      'Large-scale catalog with zero UI stutter',
+      'Dealer loyalty rewards + order dispatch logistics',
+      '70% mobile bandwidth saving for rural retailers',
     ],
     metrics: [
       { label: 'Catalog SKUs', value: '10,000+', description: 'Smooth virtualized scrolling' },
@@ -416,13 +416,13 @@ export const PROJECTS: Project[] = [
     phoneMockupType: 'sky',
     tags: ['JK Lakshmi Cement', 'Gamified Rewards', 'Barcode Scanning', 'Member Tiering', 'Play Store', 'App Store'],
     summary:
-      'Designed and delivered the official SKY Loyalty ecosystem for JK Lakshmi Cement Group, managing contractor onboarding, cement bag token redemption, milestone tier rings, and automated reward gift dispatches.',
+      'Loyalty ecosystem for JK Lakshmi Cement — contractor onboarding, cement bag token redemption, tier milestones, and reward dispatches.',
     challenge:
-      'Delivering rich gamified reward animations and high-velocity bag token QR scans without frame stutter on entry-level Android devices in construction site environments.',
+      'Gamified animations and high-velocity QR scans without frame drops on entry-level Android at construction sites.',
     solution:
-      'Crafted lightweight hardware-accelerated CustomPainter visual elements and optimized reactive BLoC pipelines with instant token validation and deduplication.',
+      'Hardware-accelerated CustomPainter elements and optimised BLoC pipelines with instant token deduplication.',
     businessImpact:
-      'Engaged 50,000+ active contractors and dealers nationwide, processed over 1,000,000 reward points seamlessly, and drove a 24% surge in brand contractor retention.',
+      '50k+ active contractors. 1M+ reward points processed. +24% brand contractor retention.',
     keyFeatures: [
       'Instant cement bag barcode scanning for points accumulation and bonus reward unlock',
       'Dynamic Platinum tier milestone ring with visual progress benchmarks',
@@ -435,9 +435,9 @@ export const PROJECTS: Project[] = [
       'Firebase Cloud Messaging (FCM) integration with deep-linked reward announcements',
     ],
     hiringHighlights: [
-      'Successful dual-store release on Google Play Store and Apple App Store',
-      'Over 50,000 active contractors onboarded with 99.8% crash-free session metrics',
-      'Designed frictionless onboarding supporting multiple Indian regional languages',
+      'Dual-store release: Google Play & Apple App Store',
+      '50k+ contractors onboarded, 99.8% crash-free',
+      'Multi-language support for regional Indian communities',
     ],
     metrics: [
       { label: 'Active Users', value: '50k+', description: 'Contractors & Dealers across India' },
@@ -498,10 +498,9 @@ export const EXPERIENCES: ExperienceItem[] = [
     isCurrent: true,
     type: 'Full-time',
     achievements: [
-      'Lead mobile application development for enterprise client products in an Agile Scrum environment, consistently hitting release milestones on time.',
-      'Spearheaded feature-first Clean Architecture across the mobile squad, reducing developer onboarding time by 35% and improving unit test coverage.',
-      'Collaborated directly with cross-functional Product Managers, UI/UX Designers, and Backend Leads to scope and ship high-impact features.',
-      'Architected automated CI/CD release pipelines targeting Google Play Console and Apple App Store Connect, cutting manual deployment time by 80%.',
+      'Lead enterprise Flutter development in Agile Scrum — consistent on-time delivery.',
+      'Drove feature-first Clean Architecture, cutting dev onboarding time by 35%.',
+      'Architected CI/CD pipelines for Play Console & App Store Connect, reducing deploy time by 80%.',
     ],
     techStack: ['Flutter', 'Dart', 'BLoC', 'Clean Architecture', 'REST APIs', 'Firebase Suite', 'Codemagic', 'App Store Connect'],
   },
@@ -512,10 +511,9 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: 'Oct 2023 – April 2024',
     type: 'Full-time',
     achievements: [
-      'Delivered end-to-end cross-platform applications adhering to stringent enterprise client SLAs, code quality benchmarks, and security standards.',
-      'Monitored project technical milestones and maintained continuous alignment with stakeholder expectations and production launch deadlines.',
-      'Optimized memory usage, widget rebuild lifecycles, and network payload sizes, achieving sub-second screen transition speeds.',
-      'Guided testing teams in creating comprehensive automated integration test suites.',
+      'Delivered enterprise apps meeting strict SLAs, code quality, and security standards.',
+      'Optimised memory, widget rebuilds, and network payloads — achieving sub-second screen transitions.',
+      'Guided testing teams in building comprehensive automated integration suites.',
     ],
     techStack: ['Flutter', 'Dart', 'GetX', 'Riverpod', 'Google Play Console', 'App Store Publishing', 'Fastlane', 'Jira'],
   },
@@ -526,10 +524,9 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: 'April 2021 – August 2023',
     type: 'Full-time',
     achievements: [
-      'Led the core mobile engineering for multi-platform client projects from initial requirements gathering to production store publishing.',
-      'Awarded Star Performer 2022 out of the entire engineering division for exceptional technical velocity, client satisfaction, and squad leadership.',
-      'Mentored and onboarded junior developers, conducted rigorous peer code reviews, and championed SOLID principles across the organization.',
-      'Promoted rapidly from Associate to Software Engineer within 12 months in recognition of high-impact deliverable completion.',
+      'Led mobile engineering from requirements to production store publishing across multiple client projects.',
+      'Star Performer 2022 — exceptional technical velocity, client satisfaction & squad leadership.',
+      'Promoted from Associate to Engineer within 12 months. Mentored junior developers.',
     ],
     techStack: ['Flutter', 'Dart', 'BLoC', 'Provider', 'Firebase Auth/Firestore', 'Unit & Widget Testing', 'CircleCI', 'Multi-Store Deployment'],
   },
@@ -540,113 +537,71 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     id: 'mobile-core',
     name: 'Mobile Core & Architecture',
     iconName: 'Code2',
-    description: 'Production-proven expertise in cross-platform systems & clean engineering',
+    description: 'Cross-platform systems & clean engineering',
     skills: [
-      { name: 'Dart 3.x & Flutter 3.x', level: 98, highlight: 'Asynchronous Multithreading, CustomPainter, Platform Channels & Engine Internals', isPrimary: true },
-      { name: 'Clean Architecture & SOLID', level: 96, highlight: 'Domain Interactors, Repository Pattern, Dependency Inversion', isPrimary: true },
-      { name: 'Performance Optimization', level: 95, highlight: '+30% Speed Boost, 0 Frame Drops, Memory Leak Prevention', isPrimary: true },
-      { name: 'Native iOS & Android Bridges', level: 85, highlight: 'Swift, Kotlin, MethodChannels & Platform Specific APIs' },
+      { name: 'Dart 3.x & Flutter 3.x', level: 98, highlight: 'Async, CustomPainter, Platform Channels', isPrimary: true },
+      { name: 'Clean Architecture & SOLID', level: 96, highlight: 'Domain Interactors, Repository Pattern', isPrimary: true },
+      { name: 'Performance Optimization', level: 95, highlight: '+30% Speed Boost, 0 Frame Drops', isPrimary: true },
+      { name: 'Native iOS & Android Bridges', level: 85, highlight: 'Swift, Kotlin, MethodChannels' },
     ],
   },
   {
     id: 'state-management',
-    name: 'State Management & Scalability',
+    name: 'State Management',
     iconName: 'Boxes',
-    description: 'Deterministic, testable, and reactive state management frameworks',
+    description: 'Deterministic, testable, reactive state',
     skills: [
-      { name: 'BLoC & Cubit Architecture', level: 96, highlight: 'Event-driven streams, Concurrency Transformers, HydratedBloc', isPrimary: true },
-      { name: 'Riverpod 2.x & CodeGen', level: 92, highlight: 'Type-safe state providers, AutoDispose & Family providers', isPrimary: true },
-      { name: 'GetX & Modular Micro-State', level: 90, highlight: 'Reactive controllers, dynamic bindings & lightweight routing' },
-      { name: 'Provider & InheritedWidgets', level: 88, highlight: 'Scoped dependency propagation and tree management' },
+      { name: 'BLoC & Cubit', level: 96, highlight: 'Event-driven streams, HydratedBloc', isPrimary: true },
+      { name: 'Riverpod 2.x', level: 92, highlight: 'Type-safe providers, AutoDispose', isPrimary: true },
+      { name: 'GetX', level: 90, highlight: 'Reactive controllers, lightweight routing' },
+      { name: 'Provider & InheritedWidgets', level: 88, highlight: 'Scoped dependency propagation' },
     ],
   },
   {
     id: 'backend-cloud',
-    name: 'Cloud Services & Telemetry',
+    name: 'Cloud & Firebase',
     iconName: 'Flame',
-    description: 'Real-time database sync, cloud telemetry, and high-availability backends',
+    description: 'Real-time sync, telemetry & high-availability',
     skills: [
-      { name: 'Firebase Firestore & Cloud Storage', level: 95, highlight: 'Compound indexing, offline caching & rule security', isPrimary: true },
-      { name: 'Firebase Authentication & Phone OTP', level: 96, highlight: 'Multi-factor authentication, Biometrics, Token Refresh', isPrimary: true },
-      { name: 'Crashlytics & Real-Time Analytics', level: 95, highlight: '99.9% Crash-Free monitoring & custom telemetry events', isPrimary: true },
-      { name: 'REST & GraphQL API Integration', level: 94, highlight: 'Dio interceptors, OAuth2 tokens, offline retry queues' },
+      { name: 'Firestore & Cloud Storage', level: 95, highlight: 'Offline caching, compound indexing', isPrimary: true },
+      { name: 'Firebase Auth & OTP', level: 96, highlight: 'MFA, Biometrics, Token Refresh', isPrimary: true },
+      { name: 'Crashlytics & Analytics', level: 95, highlight: '99.9% Crash-Free, custom telemetry', isPrimary: true },
+      { name: 'REST & GraphQL', level: 94, highlight: 'Dio interceptors, OAuth2, retry queues' },
     ],
   },
   {
     id: 'publishing-devops',
-    name: 'Store Publishing & CI/CD',
+    name: 'Publishing & CI/CD',
     iconName: 'Rocket',
-    description: 'Production release management across 6 major global app platforms',
+    description: '6 major global app stores',
     skills: [
-      { name: 'Google Play Store Console', level: 96, highlight: 'AAB app bundles, staged rollouts, Play Integrity API', isPrimary: true },
-      { name: 'Apple App Store Connect', level: 95, highlight: 'TestFlight betas, signing certs, provisioning & App Review', isPrimary: true },
-      { name: 'OEM Global Stores (Samsung, Huawei, Amazon, MI)', level: 90, highlight: 'Multi-store manifest compliance & distribution', isPrimary: true },
-      { name: 'CI/CD Automation (Fastlane, Codemagic, CircleCI)', level: 90, highlight: 'Automated test runners, build pipelines & signing' },
+      { name: 'Google Play Console', level: 96, highlight: 'AAB bundles, staged rollouts, Play Integrity', isPrimary: true },
+      { name: 'Apple App Store Connect', level: 95, highlight: 'TestFlight, provisioning, App Review', isPrimary: true },
+      { name: 'OEM Stores (Samsung, Huawei, Amazon, MI)', level: 90, highlight: 'Multi-store manifest compliance', isPrimary: true },
+      { name: 'CI/CD (Fastlane, Codemagic, CircleCI)', level: 90, highlight: 'Automated build & signing pipelines' },
     ],
   },
   {
     id: 'leadership-quality',
-    name: 'Leadership & Quality Assurance',
+    name: 'Leadership & QA',
     iconName: 'ShieldCheck',
-    description: 'Agile squad leadership, peer code reviews, and end-to-end verification',
+    description: 'Agile squad leadership & end-to-end testing',
     skills: [
-      { name: 'Agile / Scrum Squad Collaboration', level: 94, highlight: 'Sprint planning, Jira workflows & cross-functional delivery', isPrimary: true },
-      { name: 'Unit, Widget & Integration Testing', level: 92, highlight: 'Mockito, Mocktail, Golden Tests, TDD methodology', isPrimary: true },
-      { name: 'Developer Mentoring & Code Reviews', level: 95, highlight: 'Star Performer 2022, established engineering best practices', isPrimary: true },
-      { name: 'Open-Source & pub.dev Author', level: 88, highlight: 'Published packages and developer tooling contributions' },
+      { name: 'Agile / Scrum', level: 94, highlight: 'Sprint planning, Jira, cross-functional delivery', isPrimary: true },
+      { name: 'Unit, Widget & Integration Testing', level: 92, highlight: 'Mockito, Mocktail, TDD', isPrimary: true },
+      { name: 'Mentoring & Code Reviews', level: 95, highlight: 'Star Performer 2022', isPrimary: true },
+      { name: 'Open-Source & pub.dev', level: 88, highlight: 'Published packages & developer tooling' },
     ],
   },
 ];
 
 export const GLOBAL_STORES: StoreEcosystemItem[] = [
-  {
-    name: 'Google Play Store',
-    storeName: 'Google Play Console',
-    icon: 'Play',
-    description: 'AAB bundle publishing, staged releases, Play Integrity, in-app reviews & telemetry',
-    status: 'Live',
-    metrics: '500k+ Cumulative Installs',
-  },
-  {
-    name: 'Apple App Store',
-    storeName: 'App Store Connect',
-    icon: 'Apple',
-    description: 'iOS guidelines compliance, TestFlight betas, privacy manifests, Universal Links',
-    status: 'Live',
-    metrics: 'Production Verified',
-  },
-  {
-    name: 'Samsung Galaxy Store',
-    storeName: 'Galaxy Apps Developer',
-    icon: 'Smartphone',
-    description: 'Samsung One UI optimization and Galaxy fleet device certification',
-    status: 'Published',
-    metrics: 'Global Samsung Reach',
-  },
-  {
-    name: 'Amazon Appstore',
-    storeName: 'Amazon Developer Console',
-    icon: 'ShoppingBag',
-    description: 'Amazon Fire OS & Amazon DSP enterprise fleet distribution',
-    status: 'Verified',
-    metrics: 'Amazon DSP Distribution',
-  },
-  {
-    name: 'Huawei AppGallery',
-    storeName: 'Huawei Developer',
-    icon: 'Globe',
-    description: 'HMS Core integration and global AppGallery publishing standards',
-    status: 'Published',
-    metrics: 'International Reach',
-  },
-  {
-    name: 'Xiaomi GetApps (MI Store)',
-    storeName: 'Xiaomi Developer Network',
-    icon: 'Zap',
-    description: 'MIUI ecosystem compliance and high-density store deployment',
-    status: 'Published',
-    metrics: 'Regional Footprint',
-  },
+  { name: 'Google Play Store', storeName: 'Google Play Console', icon: 'Play', description: 'AAB bundles, staged rollouts, Play Integrity', status: 'Live', metrics: '500k+ Installs' },
+  { name: 'Apple App Store', storeName: 'App Store Connect', icon: 'Apple', description: 'TestFlight, privacy manifests, Universal Links', status: 'Live', metrics: 'Production Verified' },
+  { name: 'Samsung Galaxy Store', storeName: 'Galaxy Apps Developer', icon: 'Smartphone', description: 'One UI optimisation & device certification', status: 'Published', metrics: 'Global Samsung Reach' },
+  { name: 'Amazon Appstore', storeName: 'Amazon Developer Console', icon: 'ShoppingBag', description: 'Fire OS & Amazon DSP enterprise distribution', status: 'Verified', metrics: 'Amazon DSP Fleet' },
+  { name: 'Huawei AppGallery', storeName: 'Huawei Developer', icon: 'Globe', description: 'HMS Core integration & AppGallery standards', status: 'Published', metrics: 'International Reach' },
+  { name: 'Xiaomi GetApps', storeName: 'Xiaomi Developer Network', icon: 'Zap', description: 'MIUI ecosystem compliance', status: 'Published', metrics: 'Regional Footprint' },
 ];
 
 export const EDUCATION_AWARDS = {
@@ -655,7 +610,7 @@ export const EDUCATION_AWARDS = {
     company: 'OnGraph Technologies',
     year: '2022',
     description:
-      'Awarded out of the entire engineering division for outstanding technical velocity, delivering mission-critical enterprise Flutter projects under tight deadlines, and exemplary mentoring of junior engineers.',
+      'Awarded for exceptional technical velocity, delivering mission-critical Flutter projects under tight deadlines, and exemplary mentoring.',
   },
   education: [
     {
@@ -678,12 +633,12 @@ export const EDUCATION_AWARDS = {
     {
       name: 'Flutter Bootcamp',
       instructor: 'Angela Yu (The App Brewery)',
-      focus: 'Comprehensive Flutter & Dart architecture, asynchronous streams, and native platform integration.',
+      focus: 'Flutter & Dart architecture, async streams, native platform integration.',
     },
     {
       name: 'Flutter & Dart Complete Guide',
       instructor: 'Maximilian Schwarzmüller (Academind)',
-      focus: 'Advanced state management (BLoC, Provider), performance tuning, custom render animations & responsive layouts.',
+      focus: 'Advanced state management, performance tuning, custom animations.',
     },
   ],
 };
